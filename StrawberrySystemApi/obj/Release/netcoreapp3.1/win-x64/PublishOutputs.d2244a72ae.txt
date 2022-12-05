@@ -1,0 +1,7 @@
+E:\Tony\StrawberryAPI\StrawberrySystemApi\StrawberrySystemApi\obj\Release\netcoreapp3.1\win-x64\PubTmp\Out\StrawberrySystemApi.exe
+E:\Tony\StrawberryAPI\StrawberrySystemApi\StrawberrySystemApi\obj\Release\netcoreapp3.1\win-x64\PubTmp\Out\appsettings.Development.json
+E:\Tony\StrawberryAPI\StrawberrySystemApi\StrawberrySystemApi\obj\Release\netcoreapp3.1\win-x64\PubTmp\Out\appsettings.json
+E:\Tony\StrawberryAPI\StrawberrySystemApi\StrawberrySystemApi\obj\Release\netcoreapp3.1\win-x64\PubTmp\Out\StrawberrySystemApi.dll
+E:\Tony\StrawberryAPI\StrawberrySystemApi\StrawberrySystemApi\obj\Release\netcoreapp3.1\win-x64\PubTmp\Out\StrawberrySystemApi.deps.json
+E:\Tony\StrawberryAPI\StrawberrySystemApi\StrawberrySystemApi\obj\Release\netcoreapp3.1\win-x64\PubTmp\Out\StrawberrySystemApi.runtimeconfig.json
+E:\Tony\StrawberryAPI\StrawberrySystemApi\StrawberrySystemApi\obj\Release\netcoreapp3.1\win-x64\PubTmp\Out\StrawberrySystemApi.pdb
