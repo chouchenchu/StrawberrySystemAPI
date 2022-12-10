@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using StrawberrySystemApi.DAL;
 using System.Collections.Generic;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -9,6 +10,7 @@ namespace StrawberrySystemApi.Controllers
     [ApiController]
     public class LoginController : ControllerBase
     {
+        private LoginData _loginData;
         // GET: api/<LoginController>
         [HttpGet]
         public IEnumerable<string> Get()
@@ -21,6 +23,14 @@ namespace StrawberrySystemApi.Controllers
         public string Get(int id)
         {
             return "value";
+        }
+        // GET api/<LoginController>/5
+        [HttpGet("{account},{password}")]
+        public bool GetLogin(string account,string password)
+        {
+            if(_loginData==null)
+                _loginData = new LoginData();
+            return _loginData.IsMember(account, password);
         }
 
         // POST api/<LoginController>
