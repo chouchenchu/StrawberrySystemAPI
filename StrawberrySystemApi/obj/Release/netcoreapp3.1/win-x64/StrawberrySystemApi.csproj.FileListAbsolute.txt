@@ -17,3 +17,6 @@ E:\Tony\StrawberryAPI\StrawberrySystemApi\StrawberrySystemApi\obj\Release\netcor
 E:\Tony\StrawberryAPI\StrawberrySystemApi\StrawberrySystemApi\obj\Release\netcoreapp3.1\win-x64\StrawberrySystemApi.dll
 E:\Tony\StrawberryAPI\StrawberrySystemApi\StrawberrySystemApi\obj\Release\netcoreapp3.1\win-x64\StrawberrySystemApi.pdb
 E:\Tony\StrawberryAPI\StrawberrySystemApi\StrawberrySystemApi\obj\Release\netcoreapp3.1\win-x64\StrawberrySystemApi.genruntimeconfig.cache
+E:\Tony\StrawberryAPI\StrawberrySystemApi\StrawberrySystemApi\bin\Release\netcoreapp3.1\win-x64\System.Data.SqlClient.dll
+E:\Tony\StrawberryAPI\StrawberrySystemApi\StrawberrySystemApi\bin\Release\netcoreapp3.1\win-x64\sni.dll
+E:\Tony\StrawberryAPI\StrawberrySystemApi\StrawberrySystemApi\obj\Release\netcoreapp3.1\win-x64\StrawberrySystemApi.csproj.CopyComplete

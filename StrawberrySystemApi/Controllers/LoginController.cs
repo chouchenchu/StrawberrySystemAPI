@@ -20,17 +20,22 @@ namespace StrawberrySystemApi.Controllers
 
         // GET api/<LoginController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public string Get(string id)
         {
-            return "value";
+            return id;
         }
         // GET api/<LoginController>/5
         [HttpGet("{account},{password}")]
-        public bool GetLogin(string account,string password)
+        public string GetLogin(string account,string password)
         {
-            if(_loginData==null)
+            if (_loginData == null)
                 _loginData = new LoginData();
-            return _loginData.IsMember(account, password);
+            if (_loginData.IsMember(account, password))
+                return "登入成功";
+            else
+                return "登入失敗";
+
+            //return _loginData.GetMemberInfo(account,password);
         }
 
         // POST api/<LoginController>

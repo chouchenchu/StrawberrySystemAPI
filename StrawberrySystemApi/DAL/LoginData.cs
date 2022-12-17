@@ -11,7 +11,10 @@ namespace StrawberrySystemApi.DAL
         {
             try
             {
-                using (SqlConnection con = new SqlConnection(Entry.SystemConfig.DBPath))
+                //string temp = "Data Source=LAPTOP-JACK\\SQLEXPRESS;Initial Catalog=StrawberrySystem_Test;Integrated Security=True";
+                string temp = "Data Source=LAPTOP-JACK\\SQLEXPRESS;Initial Catalog=StrawberrySystem_Test;user id=sa; password=tony90415;";
+
+                using (SqlConnection con = new SqlConnection(/*Entry.SystemConfig.DBPath*/temp))
                 {
                     con.Open();
                     string sql = $@"select count(*) as count from MemberData where Account = {account.FormatDBString()} and Password = {password.FormatDBString()}";
@@ -31,6 +34,32 @@ namespace StrawberrySystemApi.DAL
                 return false;
             }
             return false;
+        }
+        public string GetMemberInfo(string account, string password)
+        {
+            string temp = "Data Source=LAPTOP-JACK\\SQLEXPRESS;Initial Catalog=StrawberrySystem_Test;Integrated Security=True";
+            try
+            {
+                using (SqlConnection con = new SqlConnection(/*Entry.SystemConfig.DBPath*/temp))
+                {
+                    con.Open();
+                    string sql = $@"select * from MemberData where Account = '123' and Password = '123'";
+                    using (System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(sql, con))
+                    {
+                        System.Data.SqlClient.SqlDataReader rdr = null;
+                        rdr = cmd.ExecuteReader();
+                        while (rdr.Read())
+                        {
+                            return rdr["Name"].ToString();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return "";
+            }
+            return "";
         }
     }
 }

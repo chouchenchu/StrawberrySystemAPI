@@ -17,3 +17,10 @@ E:\Tony\StrawberryAPI\StrawberrySystemApi\StrawberrySystemApi\obj\Release\netcor
 E:\Tony\StrawberryAPI\StrawberrySystemApi\StrawberrySystemApi\obj\Release\netcoreapp3.1\StrawberrySystemApi.dll
 E:\Tony\StrawberryAPI\StrawberrySystemApi\StrawberrySystemApi\obj\Release\netcoreapp3.1\StrawberrySystemApi.pdb
 E:\Tony\StrawberryAPI\StrawberrySystemApi\StrawberrySystemApi\obj\Release\netcoreapp3.1\StrawberrySystemApi.genruntimeconfig.cache
+E:\Tony\StrawberryAPI\StrawberrySystemApi\StrawberrySystemApi\bin\Release\netcoreapp3.1\System.Data.SqlClient.dll
+E:\Tony\StrawberryAPI\StrawberrySystemApi\StrawberrySystemApi\bin\Release\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+E:\Tony\StrawberryAPI\StrawberrySystemApi\StrawberrySystemApi\bin\Release\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+E:\Tony\StrawberryAPI\StrawberrySystemApi\StrawberrySystemApi\bin\Release\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+E:\Tony\StrawberryAPI\StrawberrySystemApi\StrawberrySystemApi\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\Tony\StrawberryAPI\StrawberrySystemApi\StrawberrySystemApi\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\Tony\StrawberryAPI\StrawberrySystemApi\StrawberrySystemApi\obj\Release\netcoreapp3.1\StrawberrySystemApi.csproj.CopyComplete
