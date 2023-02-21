@@ -1,0 +1,9 @@
+D:\Tony_Project\FlutterProject\StrawberryApi\StrawberryApi\StrawberrySystemApi\obj\Release\netcoreapp3.1\win-x64\PubTmp\Out\StrawberrySystemApi.exe
+D:\Tony_Project\FlutterProject\StrawberryApi\StrawberryApi\StrawberrySystemApi\obj\Release\netcoreapp3.1\win-x64\PubTmp\Out\appsettings.Development.json
+D:\Tony_Project\FlutterProject\StrawberryApi\StrawberryApi\StrawberrySystemApi\obj\Release\netcoreapp3.1\win-x64\PubTmp\Out\appsettings.json
+D:\Tony_Project\FlutterProject\StrawberryApi\StrawberryApi\StrawberrySystemApi\obj\Release\netcoreapp3.1\win-x64\PubTmp\Out\StrawberrySystemApi.dll
+D:\Tony_Project\FlutterProject\StrawberryApi\StrawberryApi\StrawberrySystemApi\obj\Release\netcoreapp3.1\win-x64\PubTmp\Out\StrawberrySystemApi.deps.json
+D:\Tony_Project\FlutterProject\StrawberryApi\StrawberryApi\StrawberrySystemApi\obj\Release\netcoreapp3.1\win-x64\PubTmp\Out\StrawberrySystemApi.runtimeconfig.json
+D:\Tony_Project\FlutterProject\StrawberryApi\StrawberryApi\StrawberrySystemApi\obj\Release\netcoreapp3.1\win-x64\PubTmp\Out\StrawberrySystemApi.pdb
+D:\Tony_Project\FlutterProject\StrawberryApi\StrawberryApi\StrawberrySystemApi\obj\Release\netcoreapp3.1\win-x64\PubTmp\Out\System.Data.SqlClient.dll
+D:\Tony_Project\FlutterProject\StrawberryApi\StrawberryApi\StrawberrySystemApi\obj\Release\netcoreapp3.1\win-x64\PubTmp\Out\sni.dll

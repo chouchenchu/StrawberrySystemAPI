@@ -12,7 +12,7 @@ namespace StrawberrySystemApi.DAL
             try
             {
                 //string temp = "Data Source=LAPTOP-JACK\\SQLEXPRESS;Initial Catalog=StrawberrySystem_Test;Integrated Security=True";
-                string temp = "Data Source=LAPTOP-JACK\\SQLEXPRESS;Initial Catalog=StrawberrySystem_Test;user id=sa; password=tony90415;";
+                string temp = "Data Source=rd-db-server\\SQLEXPRESS;Initial Catalog=Tony_Test;user id=sa; password=aMiTu@F0de1a!;";
 
                 using (SqlConnection con = new SqlConnection(/*Entry.SystemConfig.DBPath*/temp))
                 {

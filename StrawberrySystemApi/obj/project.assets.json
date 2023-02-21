@@ -470,31 +470,37 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jack Chou\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\tony2_chou\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Tony\\StrawberryAPI\\StrawberrySystemApi\\StrawberrySystemApi\\StrawberrySystemApi.csproj",
+      "projectUniqueName": "D:\\Tony_Project\\FlutterProject\\StrawberryApi\\StrawberryApi\\StrawberrySystemApi\\StrawberrySystemApi.csproj",
       "projectName": "StrawberrySystemApi",
-      "projectPath": "E:\\Tony\\StrawberryAPI\\StrawberrySystemApi\\StrawberrySystemApi\\StrawberrySystemApi.csproj",
-      "packagesPath": "C:\\Users\\Jack Chou\\.nuget\\packages\\",
-      "outputPath": "E:\\Tony\\StrawberryAPI\\StrawberrySystemApi\\StrawberrySystemApi\\obj\\",
+      "projectPath": "D:\\Tony_Project\\FlutterProject\\StrawberryApi\\StrawberryApi\\StrawberrySystemApi\\StrawberrySystemApi.csproj",
+      "packagesPath": "C:\\Users\\tony2_chou\\.nuget\\packages\\",
+      "outputPath": "D:\\Tony_Project\\FlutterProject\\StrawberryApi\\StrawberryApi\\StrawberrySystemApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Jack Chou\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tony2_chou\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://sa-server:8081/nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -529,6 +535,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.1.28, 3.1.28]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -540,5 +552,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://sa-server:8081/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
 }
