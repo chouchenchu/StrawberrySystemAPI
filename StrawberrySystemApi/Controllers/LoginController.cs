@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using StrawberrySystemApi.DAL;
+using StrawberrySystemApi.Model.Login;
 using System.Collections.Generic;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -12,17 +13,21 @@ namespace StrawberrySystemApi.Controllers
     {
         private LoginData _loginData;
         // GET: api/<LoginController>
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
+        //[HttpGet]
+        //public IEnumerable<string> Get()
+        //{
+        //    return new string[] { "value1", "value2" };
+        //}
 
-        // GET api/<LoginController>/5
-        [HttpGet("{id}")]
-        public string Get(string id)
+        [HttpPost]
+        public IActionResult LoginCheck(LoginModel model)
         {
-            return id;
+            if (_loginData == null)
+                _loginData = new LoginData();
+            var result = _loginData.CheckMemberAuth(model);
+            if(result.IsSuccess)
+                return Ok(result);
+            return BadRequest(result);
         }
         // GET api/<LoginController>/5
         [HttpGet("{account},{password}")]
@@ -36,24 +41,6 @@ namespace StrawberrySystemApi.Controllers
                 return "登入失敗";
 
             //return _loginData.GetMemberInfo(account,password);
-        }
-
-        // POST api/<LoginController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/<LoginController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<LoginController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
 }
