@@ -11,9 +11,8 @@ namespace StrawberrySystemApi.DAL
         public LoginOutputModel CheckMemberAuth(LoginModel loginModel)
         {
             LoginOutputModel loginOutputModel = new LoginOutputModel();
-            string temp = "Data Source=192.168.17.100\\SQLEXPRESS;Initial Catalog=Tony_Test;user id=proxsa; password=aMiTu@F0de1a!;";
 
-            using (SqlConnection con = new SqlConnection(/*Entry.SystemConfig.DBPath*/temp))
+            using (SqlConnection con = new SqlConnection(Entry.SystemConfig.DBPath))
             {
                 try
                 {

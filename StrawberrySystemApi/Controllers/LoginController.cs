@@ -12,12 +12,6 @@ namespace StrawberrySystemApi.Controllers
     public class LoginController : ControllerBase
     {
         private LoginData _loginData;
-        // GET: api/<LoginController>
-        //[HttpGet]
-        //public IEnumerable<string> Get()
-        //{
-        //    return new string[] { "value1", "value2" };
-        //}
 
         [HttpPost]
         public IActionResult LoginCheck(LoginModel model)
@@ -29,7 +23,6 @@ namespace StrawberrySystemApi.Controllers
                 return Ok(result);
             return BadRequest(result);
         }
-        // GET api/<LoginController>/5
         [HttpGet("{account},{password}")]
         public string GetLogin(string account,string password)
         {
