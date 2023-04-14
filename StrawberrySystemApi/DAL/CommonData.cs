@@ -35,7 +35,7 @@ end";
                 }
             }
         }
-        public string GetBetAmount(SetBetInfo betInfo)
+        public string GetBetAmount()
         {
             using (SqlConnection con = new SqlConnection(Entry.SystemConfig.DBPath))
             {

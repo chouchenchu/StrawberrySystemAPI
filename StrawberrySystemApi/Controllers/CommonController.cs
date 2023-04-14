@@ -2,6 +2,7 @@
 using StrawberrySystemApi.DAL;
 using StrawberrySystemApi.Model.Bet;
 using StrawberrySystemApi.Model.Common;
+using System.Reflection;
 
 namespace StrawberrySystemApi.Controllers
 {
@@ -10,7 +11,7 @@ namespace StrawberrySystemApi.Controllers
     public class CommonController : ControllerBase
     {
         #region Filed
-        private CommonData _commonData=new CommonData();
+        private CommonData _commonData = new CommonData();
         #endregion
 
         #region Public Method  
@@ -24,6 +25,16 @@ namespace StrawberrySystemApi.Controllers
             if (result)
                 return Ok(result);
             return BadRequest(result);
+        }
+        [HttpPost("GetBetAmount")]
+        public IActionResult GetBetAmount()
+        {
+            SetBetInfo betInfo = new SetBetInfo();
+            if (_commonData == null)
+                _commonData = new CommonData();
+            var result = _commonData.GetBetAmount();
+            return Ok(result);
+            //return BadRequest(result);
         }
         #endregion
 

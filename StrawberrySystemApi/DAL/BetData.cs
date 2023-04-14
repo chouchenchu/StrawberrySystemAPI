@@ -4,6 +4,9 @@ using System.Data.SqlClient;
 using System;
 using StrawberrySystemApi.Common;
 using System.Collections.Generic;
+using static StrawberrySystemApi.Model.Bet.GetBetInfo;
+using System.Linq;
+using System.Reflection.PortableExecutable;
 
 namespace StrawberrySystemApi.DAL
 {
@@ -29,30 +32,40 @@ namespace StrawberrySystemApi.DAL
                 }
             }
         }
-        public List<GetBetInfo>  GetBetRecord(SearchBetRecord searchBetRecord)
+        public GetBetInfo GetBetRecord(SearchBetRecord searchBetRecord)
         {
-            List<GetBetInfo> getinfoList = new List<GetBetInfo>();
+            GetBetInfo getinfo = new GetBetInfo();
             using (SqlConnection con = new SqlConnection(Entry.SystemConfig.DBPath))
             {
                 try
                 {
                     con.Open();
-                    string sql = $@"select * from tblBetRecord where issettlement is null or issettlement = 0";
+                    string sql = $@" select * from tblSystemSetting where functionname ='BetAmount' 
+select * from tblBetRecord where issettlement is null or issettlement = 0 and memberid = {searchBetRecord.MemberID.FormatDBString()}";
                     System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(sql, con);
                     System.Data.SqlClient.SqlDataReader rdr = null;
                     rdr = cmd.ExecuteReader();
+                    int betAmount = 0;
                     while (rdr.Read())
                     {
-                        GetBetInfo getBetInfo = new GetBetInfo();
-                        getBetInfo.CreateTime = Convert.ToDateTime(rdr["CreateDate"]).ToString("yyyy/MM/dd HH:mm:ss");
-                        getBetInfo.Amount = rdr["Money"].ToString();
-                        getinfoList.Add(getBetInfo);
+                        betAmount = Convert.IsDBNull(rdr["Value"]) ? 0 : Convert.ToInt32(rdr["Value"]);
                     }
-                        return getinfoList;
+                    rdr.NextResult();
+                    while (rdr.Read())
+                    {
+                        BetInfo betInfo = new BetInfo();
+                        
+                        betInfo.CreateTime = Convert.ToDateTime(rdr["CreateDate"]).ToString("yyyy/MM/dd HH:mm:ss");
+                        betInfo.Amount = rdr["Money"].ToString();
+                        betInfo.ProfitLoss = (Convert.ToInt32(betInfo.Amount) - betAmount).ToString();
+                        getinfo.BetInfoList.Add(betInfo);
+                    }
+                    getinfo.ProfitLossTotal = getinfo.BetInfoList.Sum(z => Convert.ToInt32(z.ProfitLoss)).ToString();
+                    return getinfo;
                 }
                 catch (Exception ex)
                 {
-                    return getinfoList;
+                    return getinfo;
                 }
             }
         }
