@@ -33,5 +33,17 @@ namespace StrawberrySystemApi.Controllers
             return Ok(result);
             // return BadRequest(result);
         }
+        [HttpPost("GetSettlementBet")]
+        public IActionResult SettlementAllBet(SearchBetRecord model)
+        {
+            SetBetInfo betInfo = new SetBetInfo();
+            if (_betData == null)
+                _betData = new BetData();
+            var result = _betData.SettlementAllBet(model.MemberID);
+            if (result != "0")
+                return Ok(result);
+            else
+                return BadRequest(result);
+        }
     }
 }

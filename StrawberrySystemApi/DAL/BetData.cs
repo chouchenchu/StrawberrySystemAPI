@@ -69,5 +69,27 @@ select * from tblBetRecord where issettlement is null or issettlement = 0 and me
                 }
             }
         }
+        public string SettlementAllBet(string memberid)
+        {
+            SearchBetRecord searchBetRecord = new SearchBetRecord();
+            searchBetRecord.MemberID = memberid;
+            var amount = GetBetRecord(searchBetRecord).ProfitLossTotal;
+            using (SqlConnection con = new SqlConnection(Entry.SystemConfig.DBPath))
+            {
+                try
+                {
+                    con.Open();
+                    string sql = $@"update tblBetRecord set IsSettlement = 1 ,SettlementDate ={DateTime.Now.FormatDBDateTime()}
+where memberid={memberid.FormatDBString()} and IsSettlement=0 or IsSettlement is null";
+                    System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(sql, con);
+                    cmd.ExecuteReader();
+                    return amount;
+                }
+                catch (Exception ex)
+                {
+                    return "0";
+                }
+            }
+        }
     }
 }
